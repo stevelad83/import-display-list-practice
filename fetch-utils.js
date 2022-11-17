@@ -13,3 +13,8 @@ export async function fetchCars() {
     const response = await client.from('cars').select('*');
     return response.data;
 }
+
+export async function fetchAnimals() {
+    const response = await client.from('animals').select('*');
+    return response.data;
+}

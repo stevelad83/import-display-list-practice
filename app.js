@@ -1,11 +1,12 @@
 /* Imports */
 
-import { fetchCars, fetchMovies } from './fetch-utils.js';
-import { renderCar, renderMovie } from './render-utils.js';
+import { fetchAnimals, fetchCars, fetchMovies } from './fetch-utils.js';
+import { renderAnimal, renderCar, renderMovie } from './render-utils.js';
 
 /* Get DOM Elements */
 const moviesContainer = document.getElementById('movies-container');
 const carsContainer = document.getElementById('cars-container');
+const animalsContainer = document.getElementById('animals-container');
 /* State */
 
 /* Events */
@@ -21,11 +22,19 @@ window.addEventListener('load', async () => {
 
 window.addEventListener('load', async () => {
     const cars = await fetchCars();
-    console.log(cars);
 
     for (let car of cars) {
         const carEl = renderCar(car);
         carsContainer.append(carEl);
+    }
+});
+
+window.addEventListener('load', async () => {
+    const animals = await fetchAnimals();
+
+    for (let animal of animals) {
+        const animalEl = renderAnimal(animal);
+        animalsContainer.append(animalEl);
     }
 });
 /* Display Functions */

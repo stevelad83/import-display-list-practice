@@ -1,3 +1,17 @@
+## Plan
+
+## Setup
+
+-Create 4-column, 3-row table in supabase
+
+## Functions
+
+-fetch all data (async)
+-window event listener (on load)
+-fetch, loop, render & append
+
+-render function - object => DOM element (div + p + p) (outer div class ='table-item)
+
 ## The Golden Rule:
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁

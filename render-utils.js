@@ -39,3 +39,15 @@ export function renderAnimal(animal) {
     div.append(h2, p);
     return div;
 }
+
+export function renderAuthor(author) {
+    const div = document.createElement('div');
+    const h2 = document.createElement('h2');
+    const p = document.createElement('p');
+
+    h2.textContent = `'${author.quote}'`;
+    p.textContent = `Said by ${author.author} in ${author.year}`;
+
+    div.append(h2, p);
+    return div;
+}
